@@ -1,0 +1,48 @@
+{
+
+  "name": "server",
+
+  "version": "1.0.0",
+
+  "description": "A simple test application",
+
+  "main": "server.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "build": "tsc --build",
+
+    "start": "node dist/server.js",
+
+    "start:dev": "nodemon ./src/server.ts"
+
+  },
+
+  "author": "Siddhartha Raut",
+
+  "license": "ISC",
+
+  "devDependencies": {
+
+    "@types/cors": "^2.8.17",
+
+    "typescript": "^5.6.3"
+
+  },
+
+  "dependencies": {
+
+    "@types/express": "^5.0.0",
+
+    "cors": "^2.8.5",
+
+    "express": "^4.21.1",
+
+    "ts-node": "^10.9.2"
+
+  }
+
+}
+
