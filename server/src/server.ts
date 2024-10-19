@@ -2,9 +2,9 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import productRoutes from "./routes/productRoutes"
 
-
-
 const app = express();
+
+//Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
@@ -13,7 +13,6 @@ app.use(express.static('public'));
 
 const PORT = 3000;
 
-//hello world
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
@@ -21,5 +20,5 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', productRoutes);
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${PORT}`);
 });
